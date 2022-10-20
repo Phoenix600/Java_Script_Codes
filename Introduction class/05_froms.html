@@ -8,7 +8,42 @@
 </head>
 <body>
     <form action="">
-        <input type="text">
+        <input type="number" value="First Number" placeholder="Enter first number " id="fn">
+        <br><br>
+        <input type="number" value="Second Number" placeholder="Enter second number " id="sn">
+        <br><br>
+        <input type="number" value="Third Number" placeholder="Enter third number " id="tn">
+
+        <br><br>
+        <input type="button" value="Check" onclick="greatest()">
+
+        <script type="text/javascript">
+            function greatest()
+            {
+                var n1 = parseInt(document.getElementById("fn").value);
+                var n2 = parseInt(document.getElementById("sn").value);
+                var n3 = parseInt(document.getElementById("tn").value);
+
+                if(n1 > n2)
+                {
+                    if(n1>n3)
+                        alert(n1 + " is greatest number");
+                    else 
+                        alert(n3 + " is greatest number");
+                }
+                else{
+                    if(n2>n3)
+                        alert(n2 + " is greatest number ");
+                    else
+                        alert(n3 + " is greatest number ");
+                }
+            }
+        </script>
+
     </form>
+
+
+
 </body>
-</html>`
+
+</html>
