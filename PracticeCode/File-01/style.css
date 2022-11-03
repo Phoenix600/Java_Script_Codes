@@ -4,3 +4,7 @@
     box-sizing: border-box;
 }
 
+button{
+    display: inline-block;
+    margin-left: 50%;
+}
