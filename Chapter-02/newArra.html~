@@ -11,14 +11,13 @@
 
 	</div>
 
-	<button> </button>
 
 	<script type="text/javascript">
 
 		const array = ["Rajesh","Ramesh","Suresh"];
 		alert(array);
 
-		const colors = new Array("red","green","yellow","violet");
+		var colors = new Array("red","green","yellow","orange");
 
 		var data = new Array();
 		data[0] = "Welcome to the JS classes";
@@ -30,7 +29,7 @@
 
 		for(var i=0; i<=3; i++)
 		{
-			d += "<p style ='color: '" + colors[i] + "'>" + data[i] + "</p>";
+			d += "<p style='color:" + colors[i] + "; font-size : 120'>" + data[i] + "</p>";
 		}
 
 		document.getElementById('output').innerHTML = d;
