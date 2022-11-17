@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      #TIME{
+        font-size: 90px;
+        color: rgb(76, 0, 255);
+        margin-top: 190px;
+        position:absolute;
+        font-style: bold;
+        font-weight: 900;
+        font-family: Arial;
+        
+      }
+
+      #DAY {
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        font-size: 55px;
+        font-weight: 900;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgba(82, 82, 82, 0.986);
+      }
+      .center {
+
+        position: relative;
+        margin: auto auto;
+        justify-content: center;
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="center">
+      <div id="DAY"> UNABLE_TO_LOAD_DAY :( </div>
+      <span id="TIME">TIME</span>
+    </div>
+
+
+    <script>
+      // Write java script code here
+      var today = new Date();
+      var DATE = today.getDay();
+      var MONTH = today.getMonth();
+      var DAY = today.toDateString().toUpperCase(); // This returns the data in ideal way
+      var testVar = (today.getHours() > 12) ? ' PM' : ' AM';
+      var TIME = today.getHours()%12 + " : " + today.getMinutes() + " : " + today.getSeconds() + testVar;
+
+
+      document.getElementById("DAY").innerHTML = DAY;
+      document.getElementById("TIME").innerHTML = TIME;
+
+    </script>
+  </body>
+</html>
