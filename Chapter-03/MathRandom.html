@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Random Math Lib</title>
+	<style>
+
+	</style>
+</head>
+
+<body>
+	<div class="center">
+		<h1>Random No. Generator </h1>
+		<input type="text" id="min" placeholder="Enter the minimum number">
+		<br><br>
+		<input type="text" id="max" placeholder="Enter the maximum number">
+		<br><br>
+		<input type="button" value="Generate" onclick="randomGenerator()">
+		<br><br>
+		<div id="output"></div>
+	</div>
+	<script type="text/javascript">
+		function randomGenerator() {
+			var min = parseseInt(document.getElementById('min'));
+			var max = parseInt(document.getElementById('max'));
+			var random = Math.floor(Math.random() * (max - min + 1)) + 1;
+
+			document.getElementById('output').innerHTML = random;
+		}
+	</script>
+</body>
+
+</html>

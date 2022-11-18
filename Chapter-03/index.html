@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="center">
+			<h1>Random No. Generator </h1>
+			<input type="text" id="min" placeholder="Enter the minimum number">
+			<br><br>
+			<input type="text" id="max"	placeholder="Enter the maximum number">
+			<br><br>
+			<input type="button" value="Generate" onclick="randomGenerator">
+			<br><br>
+			<div id="output"></div>
+		</div>
+		<script type="text/javascript">
+				function randomGenerator()
+				{
+				var min = pasreseInt(document.getElementById('min').value);
+				var max = parseInt(document.getElementById('max').value);
+				var random = Math.floor(Math.Random()*(max-min+1)) +1;
+
+				document.getElementById('output').innerHTML = random;
+				}
+        </script>
+</body>
+</html>
