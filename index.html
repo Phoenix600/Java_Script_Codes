@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrintNumber</title>
+</head>
+<body>
+    
+    <div id="result">NULL</div>
+    <button id="btn">Print</button>
+
+    <div id="result-2">NULL</div>
+    <button id="btn2">Display</button>
+
+    <script type="text/javascript">
+
+        document.getElementById('btn').onclick = function(){printNumber()};
+        document.getElementById('btn2').onclick = function(){printEvenOdd()};
+
+      function printNumber()
+      {
+        let nRange = parseInt(prompt("Enter the range to print the number : "));
+
+        let COUNT = 1;
+        let result = "";
+        while(COUNT != nRange)
+        {
+            result += COUNT + "<br>";
+            COUNT++;
+        }
+            document.getElementById('result').innerHTML =  result;
+      }  
+
+      function printEvenOdd()
+      {
+            let COUNT = 1;
+            let nRange = parseInt(prompt("[+]Enter the number range : "));
+            let string ="";
+
+        while(COUNT != nRange)
+        {
+            if(COUNT%2 == 0)
+            {
+                string +=  "<span style='color : red'>"+COUNT + "</span> <br>";
+            }else{
+
+                string +=  "<span style='color : blue'>"+COUNT + "</span> <br>";
+            }
+            COUNT++;
+        } 
+
+        document.getElementById('result-2').innerHTML = string;
+
+            
+      }
+
+
+
+    </script>
+</body>
+</html>
